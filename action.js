@@ -11,20 +11,6 @@ if (isMobile) {
     time.style.setProperty('--transform-y', '-700vh')
 }
 
-// Capture default fish positions so we can move them vertically on scroll
-const fishVerticalMotion = [
-    { element: fish1, speed: 0.25 },
-    { element: fish2, speed: 0.18 },
-    { element: fish3, speed: 0.22 },
-    { element: fish4, speed: 0.3 }
-].map((config) => ({
-    ...config,
-    baseTop: parseFloat(getComputedStyle(config.element).top),
-    speed: isMobile ? config.speed * 1.3 : config.speed
-}));
-
-
-
 window.addEventListener('scroll', function () {
 
     let value = window.scrollY;   //Get Scroll Value (Mobile - High)
@@ -53,11 +39,6 @@ window.addEventListener('scroll', function () {
     if (value < 380) {
         splash.style.top = 20 + value * -0.3 + 'px';
     }
-
-    //Move fishes vertically from bottom to top
-    fishVerticalMotion.forEach(({ element, baseTop, speed }) => {
-        element.style.top = baseTop - value * speed + 'px';
-    });
 })
 
 

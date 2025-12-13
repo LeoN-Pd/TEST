@@ -222,34 +222,9 @@ section #text {
 }
 
 
-/* Make all fishes image as absolute.. To overlap with background */
-.fishes {
-    position: absolute;
-    opacity: 0.8;
-}
-
-/* Properties for each fish and sea bed*/
-#fish1 {
-    top: 60%;
-    left: 10%;
-}
-
-#fish2 {
-    top: 70%;
-    right: 15%;
-}
-
-#fish3 {
-    top: 80%;
-    left: 55%;
-}
-
-#fish4 {
-    top: 90%;
-    right: 5%;
-}
 
 #seabed {
+    position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
